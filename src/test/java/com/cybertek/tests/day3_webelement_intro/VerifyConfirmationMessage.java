@@ -65,7 +65,6 @@ public class VerifyConfirmationMessage {
             System.out.println("PASS");
         }else{
             System.out.println("FAIL");
-            System.out.println("expectedMessage = " + expectedMessage);
         }
 
         //close the browser

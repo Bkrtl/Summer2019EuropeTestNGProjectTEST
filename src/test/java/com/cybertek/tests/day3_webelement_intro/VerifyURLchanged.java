@@ -44,7 +44,6 @@ public class VerifyURLchanged {
             System.out.println("PASS");
         }else{
             System.out.println("FAIL");
-            System.out.println("expectedUrl = " + expectedURL);
         }
 
         //close
