@@ -41,7 +41,8 @@ public class VerifyURLnotchanged {
             System.out.println("PASS");
         }else {
             System.out.println("FAIL");
-            System.out.println("actualURL = " +actualURL);
+
+
         }
 
         //close the browser
