@@ -23,7 +23,6 @@ public class WebDriverFactory {
                 case "firefox":
                     WebDriverManager.firefoxdriver().setup();
                     driver = new FirefoxDriver();
-
             }
             return driver;
 
