@@ -17,25 +17,11 @@ import java.util.concurrent.TimeUnit;
 
 public class loginTest extends TestBase {
 
-
-    protected WebDriver driver;
-    protected Actions action;
-    protected WebDriverWait wait;
-
-    @BeforeMethod
-    public void setUpMethod(){
-        driver = Driver.get();
-        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-        action = new Actions(driver);
-        wait = new WebDriverWait(driver,10);
+    @Test
+    public void test1(){
         driver.get(ConfigurationReader.get("url"));
-
+        driver.findElement(By.id("prependedInput")).sendKeys("user1");
+        driver.findElement(By.id("prependedInput2")).sendKeys("UserUser123"+ Keys.ENTER);
     }
 
-    @AfterMethod
-    public void tearDownMethod() throws InterruptedException {
-        Thread.sleep(1000);
-        Driver.closeDriver();
-
-    }
 }
