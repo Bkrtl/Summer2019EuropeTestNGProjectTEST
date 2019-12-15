@@ -22,6 +22,8 @@ public class loginTest extends TestBase {
         driver.get(ConfigurationReader.get("url"));
         driver.findElement(By.id("prependedInput")).sendKeys("user1");
         driver.findElement(By.id("prependedInput2")).sendKeys("UserUser123"+ Keys.ENTER);
+
+
     }
 
 }
