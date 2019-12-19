@@ -24,7 +24,7 @@ public class TestBase {
         action = new Actions(driver);
         wait = new WebDriverWait(driver,10);
         driver.get(ConfigurationReader.get("url"));
-
+        driver.manage().window().maximize();
     }
 
     @AfterMethod
