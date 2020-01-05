@@ -30,6 +30,8 @@ public class ExtentDemoTest {
 
         //attach the html report to the report object
         report.attachReporter(htmlReporter);
+
+        //title in the report
         htmlReporter.config().setReportName("Vytrack smoke test");
 
         //set environment information
@@ -38,6 +40,7 @@ public class ExtentDemoTest {
         report.setSystemInfo("Tester","Europe+UK testers");
 
     }
+
 
     @Test
     public void test1(){
@@ -56,13 +59,17 @@ public class ExtentDemoTest {
 
         extentLogger.info("verify logged in");
 
+
         //pass()-->marks the test case as passed
         extentLogger.pass("TC342 is passed");
+
     }
+
     @AfterMethod
     public void teardown(){
         //this is when the report is actually created
         report.flush();
+
     }
 
 }

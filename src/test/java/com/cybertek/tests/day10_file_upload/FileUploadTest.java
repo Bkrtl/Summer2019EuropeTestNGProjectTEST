@@ -42,6 +42,7 @@ public class FileUploadTest {
         Assert.assertEquals(actualFielename,"file.txt","Verify the file name");
     }
 
+
     @Test
     public void test2(){
         driver.get("http://practice.cybertekschool.com/upload");

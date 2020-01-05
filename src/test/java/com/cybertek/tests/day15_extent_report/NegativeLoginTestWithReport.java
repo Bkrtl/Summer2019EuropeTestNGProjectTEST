@@ -26,6 +26,8 @@ public class NegativeLoginTestWithReport extends TestBase {
         //we put after assertion so if the assertion fails, it will not send pass to report
         extentLogger.pass("PASS:Wrong Password Test");
     }
+
+
     @Test
     public void wrongUsernameTest(){
         //name of the test for report
@@ -37,13 +39,15 @@ public class NegativeLoginTestWithReport extends TestBase {
 
         loginPage.passwordInput.sendKeys("somepassword");
         extentLogger.info("Enter Password: somepassword");
+
         loginPage.loginBtn.click();
         extentLogger.info("Click login button");
         extentLogger.info("Verify page url");
-        Assert.assertEquals(driver.getCurrentUrl(),"https://qa3.vytrack.com/user/login");
+        Assert.assertEquals(driver.getCurrentUrl(),"https://qas3.vytrack.com/user/login");
         //we put after assertion so if the assertion fails, it will not send pass to report
         extentLogger.pass("PASS:Wrong Password Test");
     }
+
 }
 
 

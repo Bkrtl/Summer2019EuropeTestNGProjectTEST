@@ -17,6 +17,7 @@ public class HoverTest {
     @BeforeMethod
     public void setUpMethod() {
         driver = WebDriverFactory.getDriver("chrome");
+        driver.manage().window().maximize();
 
     }
     @AfterMethod
@@ -35,6 +36,8 @@ public class HoverTest {
         WebElement img = driver.findElement(By.tagName("img"));
 
         Actions actions = new Actions(driver);
+
+        actions.moveToElement(img).perform();
 
         WebElement text = driver.findElement(By.xpath("//h5[.='name: user1']"));
 
