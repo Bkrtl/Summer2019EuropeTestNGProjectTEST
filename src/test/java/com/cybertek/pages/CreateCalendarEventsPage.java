@@ -12,6 +12,7 @@ public class CreateCalendarEventsPage extends BasePage {
         PageFactory.initElements(Driver.get(), this);
     }
 
+    //aşağıdak tüm locator lar var, Vytrack applicationun Create Calendar Events Page inde yer alan
     @FindBy(css = "[id^='recurrence-repeat-view']")
     public WebElement repeat;
 
